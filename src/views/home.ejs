@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Details</title>
+    <link rel="stylesheet" href="/styles/home.css">
+</head>
+
+<body>
+    <div class="profile-container">
+        <form id="profileForm" method="POST" enctype="multipart/form-data">
+            <h2>Profile Details</h2>
+
+            <div class="image-upload">
+                <label for="profileImage">
+                    <img id="imagePreview" src="default-avatar.png" alt="Profile Image">
+                    <input type="file" id="profileImage" name="profileImage" accept="image/*"
+                        onchange="previewImage(event)">
+                </label>
+            </div>
+
+            <button type="submit">Upload</button>
+        </form>
+        <a href="/logout">
+            <button class="logout-button">Log Out</button>
+        </a>
+    </div>
+
+    <script>
+        function previewImage(event) {
+            const imagePreview = document.getElementById('imagePreview');
+            imagePreview.src = URL.createObjectURL(event.target.files[0]);
+        }
+    </script>
+</body>
+
+</html>
