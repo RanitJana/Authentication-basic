@@ -13,6 +13,7 @@ This is a practice project consists of basic authentication, authorization logic
 
 - node.js
 - mongoDB compass
+- copy the same values in the .env.sample and paste it in a .env file in the root directory
 
 ### Run the below commands to execute in your local system
 
